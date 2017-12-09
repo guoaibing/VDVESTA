@@ -263,7 +263,7 @@ fi
 sed -i "s#%PHP_Server_version%#$PHP_Server_version#g" vst-install.sh
 sed -i "s#%MariaDB_Server_version%#$MariaDB_Server_version#g" vst-install.sh
 
-bash vst-install.sh --force --interactive yes $Web_Server_version --vsftpd yes --proftpd no --exim yes --dovecot yes $Spamassassin_Clamav_yn --named yes --iptables yes $fail2ban_yn --mysql yes --postgresql no $Remi_yn $quota_yn --hostname $hostname_i --email $email_i --password $password
+bash vst-install.sh --force --interactive yes $Web_Server_version --vsftpd yes --proftpd no --exim no --dovecot yes $Spamassassin_Clamav_yn --named no --iptables yes $fail2ban_yn --mysql yes --postgresql no $Remi_yn $quota_yn --hostname $hostname_i --email $email_i --password $password
 
 if [ "$vDDoS_yn" != "y" ]; then
 yum -y install socat
